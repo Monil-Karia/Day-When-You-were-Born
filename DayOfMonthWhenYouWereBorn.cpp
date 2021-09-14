@@ -9,8 +9,11 @@ int main(void)
     string month[] = {"January","February","March","April","May","June","July",
                       "August","September","October","November","December"};
 
+    cout<<"Enter The Date = ";
     cin >> DD;
+    cout<<"Enter the Month = ";
     cin >> MM;
+    cout<<"Enter the Year = ";
     cin >> YYYY;
     
     //Error Message: User has given no input
