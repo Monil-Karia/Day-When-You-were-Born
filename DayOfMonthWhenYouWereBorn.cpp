@@ -25,7 +25,7 @@ int main(void)
     
     if(DD <= 0)
     {
-        //Error Message: User has given invalid input for "Days" & "Months" fields
+  
         if(MM <= 0)
         {             
             cout << " We don't have negative or null days and months. " << endl;
@@ -33,7 +33,7 @@ int main(void)
             return -1;
         }
         
-        //Error Message: User has given invalid input for "Days" field
+ 
         cout << " We don't have negative or null days. " << endl;
         cout << "              Try again!              " << endl;
         return -1;
@@ -41,7 +41,7 @@ int main(void)
     
     if(MM <= 0)
     {
-        //Error Message: User has given invalid input for "Months" field
+    
         cout << " We don't have negative or null months. " << endl;
         cout << "               Try again!               " << endl;
         return -1;
@@ -51,14 +51,14 @@ int main(void)
     {
         if(DD > 31 && MM > 12)
         {
-            //Error Message: User has given invalid input for "Days", "Months" & "Years" fields
+
             if(YYYY <= 0)
             {
                 cout << " We have 12 months, the days of a month are up to 31 " << endl;
                 cout << "       and a year should be a positive number.       " << endl;
                 cout << "                     Try again!                      " << endl;
             }
-            //Error Message: User has given invalid input for "Days" & "Months" fields
+
             else
             {
                 cout << "       We have 12 months and       " << endl;
@@ -69,14 +69,14 @@ int main(void)
         }
         else if(DD > 31 && MM <= 12)
         {
-            //Error Message: User has given invalid input for "Days" & "Years" fields
+    
             if(YYYY <= 0)
             {
                 cout << " The days of a month are up to 31 and " << endl;
                 cout << " a year should be a positive number.  " << endl;
                 cout << "             Try again!               " << endl;
             }
-            //Error Message: User has given invalid input for "Days" field
+
             else
             {
                 cout << " The days of a month are up to 31. " << endl;
@@ -86,14 +86,14 @@ int main(void)
         }
         else if(DD <= 31 && MM > 12)
         {
-            //Error Message: User has given invalid input for "Months" & "Years" fields
+
             if(YYYY <= 0)
             {
                 cout << "        We have 12 months and        " << endl;
                 cout << " a year should be a positive number. " << endl;
                 cout << "             Try again!              " << endl;
             }
-            //Error Message: User has given invalid input for "Months" field
+
             else
             {
                 cout << " We have 12 months. " << endl;
@@ -101,7 +101,7 @@ int main(void)
             }
                 
         }
-        //Error Message: User has given invalid input for "Years" field
+ 
         else if(DD <= 31 && MM <= 12 && YYYY <= 0)
         {
             cout << " A year should be a positive number. " << endl;
@@ -128,8 +128,7 @@ int main(void)
             }
             else
             {
-                //Error Message: User has requested an invalid day for the month "February"
-                //              and the requested "Year" is not a leap year.
+
                 if(DD > 28)
                 {
                     cout << " The year " << YYYY << " isn't a leap year. " << endl;
@@ -141,7 +140,7 @@ int main(void)
             break;
             
         case 4:
-            //Error Message: User has requested an invalid day for the month "April"
+
             if(DD > 30)
             {
                 cout << " April has up to 30 days. " << endl;
@@ -151,7 +150,7 @@ int main(void)
             break;
               
         case 6:
-            //Error Message: User has requested an invalid day for the month "June"
+
             if(DD > 30)
             {
                 cout << " June has up to 30 days. " << endl;
@@ -161,7 +160,7 @@ int main(void)
             break;
         
         case 9:
-            //Error Message: User has requested an invalid day for the month "September"
+
             if(DD > 30)
             {
                 cout << " September has up to 30 days. " << endl;
@@ -171,7 +170,7 @@ int main(void)
             break;
             
         case 11:
-            //Error Message: User has requested an invalid day for the month "November"
+
             if(DD > 30)
             {
                 cout << " November has up to 30 days. " << endl;
@@ -192,12 +191,12 @@ int main(void)
         NMM = (4 * MM + 23) / 10;
     }
     
-    //Calculating the day
+
     IDAY = 365 * YYYY + DD + 31 * (MM - 1) - NMM + (NYYYY / 4) - ((3 * ((NYYYY / 100) + 1) / 4));
     
     day = IDAY % 7;
     
-    //This 'flag' is used for displaying the right ending after the numbers 
+
     if(DD != 11 && DD != 12 && DD != 13)
         flag = DD % 10;
     
