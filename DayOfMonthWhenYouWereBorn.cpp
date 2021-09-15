@@ -119,8 +119,7 @@ int main(void)
             
             if((YYYY % 400) == 0 || ((YYYY % 4) == 0 && (YYYY % 100) != 0))
             {
-                //Error Message: User has requested an invalid day for the month "February"
-                //                and the requested "Year" is a leap year.
+
                 if(DD > 29)
                 {
                     cout << "  The year " << YYYY << " is a leap year. " << endl;
